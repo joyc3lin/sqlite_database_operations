@@ -8,7 +8,20 @@ Two hospital price transparency machine readible files were used. One from New Y
 ## Exploratory Data Analysis Process
 
 + Cleaned datasets to ensure that no errors would occur during data analysis
-  + looked at type of data in columns 
+  + looked at type of data in columns
+  + determined if any datasets were missing data
+  + deleted rows with missing data
+  + removed duplicate rows and columns
+  + cleaned column names to remove white spaces and special characters
++ Checked distribution of datasets by their respective revenue code
++ Looked at mean, median, mode, range, variance, standard deviation, and IQR of multiple columns from both datasets.
++ added conclusions drawn at the end
+
+## SQLite database setup process
+
++ First created a local databse with:
+  > conn = sqlite3.connect('health.db')
+  > c = conn.cursor()
 
 
 
