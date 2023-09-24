@@ -65,7 +65,7 @@ Two hospital price transparency machine readible files were used. One from New Y
   
 + created a second query to add more information into the table
 + executed the query
-+ optional: check if the queries have been populated into the table:
++ **optional:** check if the queries have been populated into the table:
 
       query = """
 
@@ -77,12 +77,49 @@ Two hospital price transparency machine readible files were used. One from New Y
       c.execute(query)
       print(c.fetchall())
   
-+ create en engine to connect to the database:
++ create an engine to connect to the database:
   
       engine = create_engine('sqlite:///health.db')
   
 + display the table:
+  
       icecream = pd.read_sql(query, conn)
       icecream
-+ 
+
+### Automatic table creation process
+
+Pulling data from a preexisting dataset
+
++ Modifying the column names in icecream to fit the column names of the selected dataset:
+  
+      columnNames = list(df_msmc)
+      idVars = columnNames[:5]
+      valueVars = columnNames[5:]
+
+      icecream_modified = df_msmc.melt(id_vars=idVars, value_vars=valueVars)
+
+      icecream_modified.columns 
+
+      icecream_modified.rename(columns={'icecream_name': 'ChargeDescription',
+                                  'icecream_type': 'LongDescription',
+                                  'flavor':'BillingCode',
+                                  'servings_per_box':'RevenueCodeDRGType',
+                                  'cost_per_box': 'GrossCharge'}, inplace=True)
+
+      icecream_modified
+
++ replacing the information in table with the modified table information:
+
+     icecream_modified.to_sql('icecream', conn, if_exists='replace')
+
++ **Optional:** testing modified table by creating queries to pull information from it:
+
+      modified_query = """
+        select * 
+        from icecream
+        where RevenueCodeDRGType = '900'
+        limit 200;
+      """
+      check = pd.read_sql(modified_query, conn)
+      check
 
