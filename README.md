@@ -19,12 +19,13 @@ Two hospital price transparency machine readible files were used. One from New Y
 
 ## SQLite database setup process
 
-+ First created a local database named health.db with:
++ First created a local database named health.db:
 
        conn = sqlite3.connect('health.db')
        c = conn.cursor()
 
-+ created a table within health.db with:
++ created a table named icecream with 5 columns within health.db:
+  + each column has its data type listed next to it
   
        c.execute("""
             CREATE TABLE icecream
@@ -37,9 +38,27 @@ Two hospital price transparency machine readible files were used. One from New Y
               );
         """)
       conn.commit()
+
++ created a query to insert information into the table:
   
-  
+     sql_query = """
+
+     INSERT INTO icecream (
+       'icecream_name',
+       'icecream_type',
+       'flavor',
+       'servings_per_box',
+       'cost_per_box'
+       )
+       values (
+         'Dazs-genhaa',
+         'bars',
+         'vanilla',
+         8,
+         10
+       );
 
 
+"""
 
 
