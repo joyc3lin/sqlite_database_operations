@@ -59,9 +59,9 @@ Two hospital price transparency machine readible files were used. One from New Y
        );     
       """
 + use this to execute the query:
-
-      c.execute(sql_query)
-      conn.commit()
+  
+     c.execute(sql_query)
+     conn.commit()
   
 + created a second query to add more information into the table
 + executed the query
