@@ -22,22 +22,12 @@ Two hospital price transparency machine readible files were used. One from New Y
 + First created a local database named health.db with:
 
 > conn = sqlite3.connect('health.db')
+> 
 > c = conn.cursor()
 
 + created a table within health.db with:
   
-  >c.execute("""
-            CREATE TABLE icecream
-              (
-                icecream_name text,
-                icecream_type text,
-                flavor text,
-                servings_per_box real, 
-                cost_per_box real
-              );
-        """)
-
-> conn.commit()
+  >c.
   
   
 
