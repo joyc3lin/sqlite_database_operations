@@ -76,5 +76,13 @@ Two hospital price transparency machine readible files were used. One from New Y
 
       c.execute(query)
       print(c.fetchall())
-
+  
++ create en engine to connect to the database:
+  
+      engine = create_engine('sqlite:///health.db')
+  
++ display the table:
+      icecream = pd.read_sql(query, conn)
+      icecream
++ 
 
