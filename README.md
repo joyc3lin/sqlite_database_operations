@@ -41,9 +41,9 @@ Two hospital price transparency machine readible files were used. One from New Y
 
 + created a query to insert information into the table:
   
-     sql_query = """
+      sql_query = """
 
-     INSERT INTO icecream (
+      INSERT INTO icecream (
        'icecream_name',
        'icecream_type',
        'flavor',
