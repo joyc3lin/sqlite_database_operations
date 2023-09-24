@@ -36,7 +36,7 @@ Two hospital price transparency machine readible files were used. One from New Y
                 cost_per_box real
               );
         """)
-     conn.commit()
+      conn.commit()
   
   
 
