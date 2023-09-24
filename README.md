@@ -21,7 +21,10 @@ Two hospital price transparency machine readible files were used. One from New Y
 
 + First created a local databse with:
   > conn = sqlite3.connect('health.db')
+  > 
   > c = conn.cursor()
+  >
+  sdasd
 
 
 
