@@ -57,8 +57,6 @@ Two hospital price transparency machine readible files were used. One from New Y
          8,
          10
        );     
-
-
-"""
+      """
 
 
