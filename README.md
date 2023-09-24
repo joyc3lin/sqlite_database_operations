@@ -29,15 +29,15 @@ Two hospital price transparency machine readible files were used. One from New Y
   
        c.execute("""
             CREATE TABLE icecream
-              (
-                icecream_name text,
+                 (
+                 icecream_name text,
                 icecream_type text,
                 flavor text,
                 servings_per_box real, 
                 cost_per_box real
               );
         """)
-      conn.commit()     
+       conn.commit()     
 
 + created a query to insert information into the table:
   
