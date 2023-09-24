@@ -65,5 +65,16 @@ Two hospital price transparency machine readible files were used. One from New Y
   
 + created a second query to add more information into the table
 + executed the query
-+ 
++ optional: check if the queries have been populated into the table:
+
+      query = """
+
+        SELECT *
+        from icecream;
+
+        """
+
+      c.execute(query)
+      print(c.fetchall())
+
 
