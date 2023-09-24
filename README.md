@@ -110,7 +110,7 @@ Pulling data from a preexisting dataset
 
 + replacing the information in table with the modified table information:
 
-     icecream_modified.to_sql('icecream', conn, if_exists='replace')
+      icecream_modified.to_sql('icecream', conn, if_exists='replace')
 
 + **Optional:** testing modified table by creating queries to pull information from it:
 
