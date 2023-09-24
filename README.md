@@ -27,7 +27,7 @@ Two hospital price transparency machine readible files were used. One from New Y
 + created a table named icecream with 5 columns within health.db:
   + each column has its data type listed next to it
   
-       c.execute("""
+        c.execute("""
             CREATE TABLE icecream
                  (
                  icecream_name text,
